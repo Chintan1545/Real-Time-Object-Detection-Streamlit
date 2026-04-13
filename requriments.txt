@@ -1,5 +1,6 @@
-numpy
-opencv-python-headless
-opencv-python
-imutils
 streamlit
+opencv-python-headless
+numpy
+pandas
+scikit-learn
+pillow
