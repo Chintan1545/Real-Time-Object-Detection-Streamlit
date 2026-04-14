@@ -91,19 +91,22 @@ elif mode == "Video":
         cap.release()
 
 # ---------------- WEBCAM ----------------
+# else:
+#     start = st.button("Start Webcam")
+#     stop = st.button("Stop Webcam")
+#     stframe = st.empty()
+
+#     if start:
+#         cap = cv2.VideoCapture(0)
+#         while cap.isOpened():
+#             ret, frame = cap.read()
+#             if not ret or stop:
+#                 break
+
+#             frame = detect_objects(frame)
+#             stframe.image(frame, channels="BGR")
+
+#         cap.release()
+# ---------------- WEBCAM ----------------
 else:
-    start = st.button("Start Webcam")
-    stop = st.button("Stop Webcam")
-    stframe = st.empty()
-
-    if start:
-        cap = cv2.VideoCapture(0)
-        while cap.isOpened():
-            ret, frame = cap.read()
-            if not ret or stop:
-                break
-
-            frame = detect_objects(frame)
-            stframe.image(frame, channels="BGR")
-
-        cap.release()
+    st.warning("⚠️ Webcam is not supported on cloud deployment. Please run locally for webcam features.")
